@@ -1,0 +1,8 @@
+#Database variables
+DATABASE=my_api
+DB_DIALECT=mysql 
+HOST=localhost
+DB_PORT=3306
+PORT=3001
+DB_USER=root
+DB_PASSWORD=root

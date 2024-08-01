@@ -8,7 +8,7 @@ import responseHandler from '../utils/responseHandler.js';
 const app = express();
 
 // Getting all users
-app.get('/all', verifyToken, async function (req, res, next) {
+app.get('/all', async function (req, res, next) {
   let users = await UserService.AllUsers();
   res.send(users);
 });

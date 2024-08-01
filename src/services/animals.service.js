@@ -1,5 +1,5 @@
 import AnimalRepository  from "../repository/animals.repository.js";
-import HTTP_STATUS  from "../utils/constants.js";
+import { HTTP_STATUS }  from "../utils/constants.js";
 
 class Animalservice {
   //Method to create a new Animal

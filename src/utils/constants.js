@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const secret = "secret";
-const HTTP_STATUS = {
+export const HTTP_STATUS = {
   OK: 200,
   CREATED: 201,
   ACCEPTED: 202,
@@ -25,4 +25,4 @@ const connection = {
   port : 3306
  }
 
-export default  { secret, HTTP_STATUS,  PATH, connection };
+export default  { secret,   PATH, connection };

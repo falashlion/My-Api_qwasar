@@ -1,6 +1,6 @@
 const responseHandler = ({
   res,
-  status = 200,
+  status =  200,
   data = null,
   message = "",
   error = "No error"

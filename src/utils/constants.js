@@ -1,7 +1,7 @@
 import dotenv from 'dotenv';
 dotenv.config();
 
-const secret = "secret";
+export const secret = process.env.SECRET;
 export const HTTP_STATUS = {
   OK: 200,
   CREATED: 201,
@@ -14,15 +14,15 @@ export const HTTP_STATUS = {
   SERVER_ERROR: 500,
   PARTIAL_CONTENT: 206
 };
-const PATH = "/resources/uploads/"
+export const PATH = "/resources/uploads/"
 
-const connection = {
-  databaseName :"my_api",
-  dbDailect :"mysql",
-  dbUser :"felix",
-  dbPassword : "felix007",
-  host : "localhost" ,
-  port : 3306
+export const connection = {
+  databaseName :process.env.DATABASE,
+  dbDailect :process.env.DB_DIALECT,
+  dbUser : process.env.DB_USER,
+  dbPassword : process.env.DB_PASSWORD,
+  host : process.env.HOST,
+  port : process.env.DB_PORT,
  }
 
-export default  { secret,   PATH, connection };
+

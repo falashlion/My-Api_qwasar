@@ -1,7 +1,7 @@
 import UserRepository  from "../repository/user.repository.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import  secret from "../utils/constants.js";
+import  { secret } from "../utils/constants.js";
 import { HTTP_STATUS } from "../utils/constants.js";
 
 
@@ -117,7 +117,7 @@ class UserService {
     }
 
     //Generate a token for the user loging in using user id
-    var token = jwt.sign({ id: user.id}, 'secret');
+    var token = jwt.sign({ id: user.id}, secret);
 
     user.dataValues.token = token;
 

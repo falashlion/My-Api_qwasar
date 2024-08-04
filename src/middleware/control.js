@@ -1,4 +1,4 @@
-import secret from "../utils/constants.js";
+import { secret } from "../utils/constants.js";
 import { HTTP_STATUS } from "../utils/constants.js";
 import responseHandler from "../utils/responseHandler.js";
 import ROLES from "./roles_permissions.js";

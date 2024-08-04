@@ -51,10 +51,10 @@ export default class UserRepository {
     if (!user) {
       return "User Not found";
     }
-
     //updating user with the options
     await db.users.update(options, {
       where: { id: user.id },
+      
     });
 
     //getting back the updated user to be sure it was updated

@@ -1,5 +1,5 @@
 import { Sequelize, DataTypes } from "sequelize";
-import connection from "../utils/constants.js";
+import { connection } from "../utils/constants.js";
 import dotenv from 'dotenv';
 import userModel from "./user.model.js";
 import animalModel from "./animal.model.js";
@@ -10,10 +10,12 @@ const db = {};
 
 console.log(connection.dbPassword);
 
-const sequelize = new Sequelize('my_api', 'felix', 'felix007', {
-  host: "localhost",
-  dialect: "mysql", // Corrected typo here
-  port: 3306
+const sequelize = new Sequelize(connection.databaseName,
+  connection.dbUser, 
+  connection.dbPassword, {
+  host: connection.host,
+  dialect: connection.dbDailect, // Corrected typo here
+  port: connection.port,
 });
 
 db.Sequelize = Sequelize;
